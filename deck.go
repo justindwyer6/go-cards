@@ -63,8 +63,10 @@ func newDeckFromFile(filename string) deck {
 
 func (d deck) shuffle() {
 	for i := range d {
-		rand.Seed(time.Now().UnixNano())
-		newPosition := rand.Intn(len(d) - 1)
+		source := rand.NewSource(time.Now().UnixNano())
+		r := rand.New(source)
+
+		newPosition := r.Intn(len(d) - 1)
 
 		d[i], d[newPosition] = d[newPosition], d[i]
 	}
