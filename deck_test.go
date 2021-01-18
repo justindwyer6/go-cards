@@ -4,9 +4,9 @@ import "testing"
 
 func TestNewDeck(t *testing.T) {
 	d := newDeck()
-	e := 15
+	a := 16
 
-	if len(d) != e {
-		t.Errorf("Expected deck length of %v, but got %v", e, len(d))
+	if len(d) != a {
+		t.Errorf("Expected deck length of %v, but got %v", a, len(d))
 	}
 }
