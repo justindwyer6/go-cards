@@ -14,4 +14,9 @@ func TestNewDeck(t *testing.T) {
 	if d[0] != firstCardAssertion {
 		t.Errorf("Expected first card to be %v, but got %v", firstCardAssertion, d[0])
 	}
+
+	lastCardAssertion := "Four of Clubs"
+	if d[len(d)-1] != lastCardAssertion {
+		t.Errorf("Expected last card to be %v, but got %v", lastCardAssertion, d[len(d)-1])
+	}
 }
